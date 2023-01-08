@@ -1,0 +1,9 @@
+checkmark = <:lg_check:902290122739970058>
+cross = <:lg_cross:902288945239441479>
+warn = <:lg_warn:902289016634900500>
+
+information = <:lg_information:902941757606604851>
+loading = <a:loading:902218385369223178>
+
+join = <:blurple_join:902283981330972712>
+leave = <:blurple_leave:902283934828728380>

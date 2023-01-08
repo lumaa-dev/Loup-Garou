@@ -1,0 +1,223 @@
+{
+    "ownerId": "474231265059405845",
+    "devPrefix": "%",
+    "token": "haha you thought",
+    "cmds": [
+        {
+            "name": "help",
+            "description": "Regardez les commandes"
+        },
+        {
+            "name": "create",
+            "description": "Crée une partie",
+            "options": [
+                {
+                    "name": "max",
+                    "description": "Nombre de joueurs maximum",
+                    "type": "INTEGER",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "name": "end",
+            "description": "Forcez l'arrêt d'une partie"
+        },
+        {
+            "name": "sessions",
+            "description": "Obtenez une liste des sessions actuelles"
+        },
+        {
+            "name": "start",
+            "description": "Démarrez la partie depuis votre session"
+        },
+        {
+            "name": "credits",
+            "description": "Regardez qui a fais quoi pendant le développement"
+        },
+        {
+            "name": "parametres",
+            "description": "Changez les paramètres de votre session"
+        }
+    ],
+    "cmdsAdmin": [
+        {
+            "name": "temp",
+            "description": "Souvent utilisée pour des fonctions temporaires"
+        },
+        {
+            "name": "eval",
+            "description": "Evaluate some code",
+            "options": [
+                {
+                    "name": "code",
+                    "description": "config.cmdsAdmin.options[0].description",
+                    "required": true,
+                    "type": "STRING"
+                }
+            ]
+        },
+        {
+            "name": "gsessions",
+            "description": "Sessions dans tout les guildes"
+        },
+        {
+            "name": "botsession",
+            "description": "Créé une session par le bot",
+            "options": [
+                {
+                    "name": "max",
+                    "description": "Nombre de joueurs maximum",
+                    "type": "INTEGER",
+                    "required": true
+                }
+            ]
+        }
+    ],
+    "lg": {
+        "deleteTime": 5,
+        "startDelay": 10,
+        "roundDelay": 7.5,
+        "electionTalkTime": 90,
+        "voteTime": 60,
+        "talkTime": 60,
+        "messages": {
+            "eventDescription": "Préparez vous pour une partie de __Loup-Garou__ !\nCette session à été crée par %host.\n<:lg_warn:902289016634900500> Touts informations inscrite ici peut-être changée plus tard.",
+            "roundMessages": {
+                "electionDay": "ELECTIONDAY",
+                "firstDay": "FIRSTDAY",
+                "regularDay": "DAY",
+                "regularNight": "NIGHT"
+            },
+            "errorMessages": {
+                "unknown": "Une erreur inconnue c'est produite !",
+                "notHost": "Vous n'êtes pas l'organisateur !",
+                "hasNoSession": "Vous ne possédez pas de sessions.",
+                "noSessionsStart": "Aucune sessions doient être lancées.",
+                "sessionStarted": "Cette session à déjà été lancée.",
+                "channelNotFound": "Un channel nécessaire n'a pas été trouvé !",
+                "inSession": "Vous êtes déjà dans une session !"
+            },
+            "warnMessages": {
+                "codeError": "Une erreur interne c'est produite !"
+            },
+            "successMessages": {
+                "unknown": "Quelque chose de bien c'est passé",
+                "joinedSession": "Vous avez été ajouté à la session !",
+                "leftSession": "Vous êtes parti de cette session !",
+                "deletedSession": "Votre session à été supprimée.",
+                "sessionStarting": "Votre session va commencer dans %sec secondes !"
+            },
+            "loadingMessages": [
+                "Chargement...",
+                "Téléchargement...",
+                "En cours...",
+                "Expédition des données...",
+                "Dépistage...",
+                "Je procède...",
+                "Réponse en développement...",
+                "Développement...",
+                "Hacking...",
+                "Speedrunning..."
+            ]
+        },
+        "roles": [
+            {
+                "name": "Loup-Garou",
+                "description": "Ils se réveillent chaque nuit pour éliminer un villageois. Le jour, ils participent aux débats en essayant de ne pas faire découvrir leur activité nocturne. Ils ont le droit de voter comme tous les autres joueurs, et éventuellement contre un des leurs par nécessité.\n\nLeur but est de tuer tous les autres villageois.",
+                "winsWith": "loup",
+                "changed": false
+            },
+            {
+                "name": "un Villageois",
+                "description": "Le villageois n'a aucune actions majeures qui pourrait causé la mort d'un loup.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "la Voyante",
+                "description": "La voyante, à chaque nuit, peux séléctionner un joueur pour dévoiler son rôle.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "la Sorcière",
+                "description": "La sorcière peux utiliser une potion par nuit ou bien passer son tour, lorsqu'une potion est utilisée, elle devient inutilisable.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "Cupidon",
+                "description": "Lors de la première nuit, Cupidon peux choisir deux personnes à se mettre en couple.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "le Chasseur",
+                "description": "Lorsque le chasseur décède, il peux tiré sur quelqu'un dans un temps impartis.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "Les deux soeurs",
+                "description": "Lors du début de la partie, un message aux soeurs indiquera leur identité.",
+                "winsWith": "custom",
+                "changed": false
+            },
+            {
+                "name": "un Salvateur",
+                "description": "Le salvateur peux protéger une personne toutes les nuits dont lui-même, mais ne peux pas protéger la même personne deux fois de suite.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "l'Idiot du village",
+                "description": "S'il est désigné par le vote du village, il ne meurt pas, mais perd seulement sa capacité à voter.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "le Bouc émissaire",
+                "description": "Le bouc émissaire mourra lors d'un vote à égalité, lorsqu'il meurt, il pourra choisir un joueur qui ne pourra pas voter pour la journée.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "le Joueur de flûte",
+                "description": "Le joueur de flûte gagne seul. Son but est d'envoûter tout les joueurs, il peux envoûter n'importe qui, chaque nuit, jusqu'à sa mort. Lorsqu'il meurt, chaque joueurs envoûtés ne seront plus envoûté.",
+                "winsWith": "solo",
+                "changed": false
+            },
+            {
+                "name": "le Loup blanc",
+                "description": "Le loup blanc se réveille en même temps que les loups mais il doit gagner seul. Il peut tuer loups et villageois, sauf qu'il ne peux tuer qu'une nuit sur deux.",
+                "winsWith": "solo",
+                "changed": false
+            },
+            {
+                "name": "le Corbeau",
+                "description": "Chaque nuit, il pourra soumettre deux votes supplémentaires à n'importe quel joueur.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "l'Ancien du village",
+                "description": "L’ancien possède deux vies contre la nuit. Quand il devrait être tué par les loups garous, il en perd une sans en être averti. Le matin, il se réveille avec les autres, mais dévoile sa carte.\n\nSi l’ancien est chassé du village par le vote des villageois il meurt directement et tous les rôles des villageois perdent leurs pouvoirs.",
+                "winsWith": "villageois",
+                "changed": false
+            },
+            {
+                "name": "Le Renard",
+                "description": "La première nuit, le renard flaire 3 personnes. Si un loup garou est dans ce groupe il pourra réutiliser son pouvoir la nuit suivante. Sinon, il devient villageois.",
+                "winsWith": "custom",
+                "changed": false
+            },
+            {
+                "name": "le Chaman",
+                "description": "Pendant la nuit il peut parler avec les morts par message. Le chaman sait qui parle mais les morts ne savent pas qui est le chaman. Si il y a plusieurs chaman dans la partie, ils pourront parler à travers le tchat mais ne peuvent pas savoir qui est leur collègue.\n\nLe chaman a aussi le pouvoir de ressusciter un mort une fois par partie. Après la résurrection du mort, sa carte restera dévoilé.",
+                "winsWith": "villageois",
+                "changed": false
+            }
+        ]
+    }
+}
