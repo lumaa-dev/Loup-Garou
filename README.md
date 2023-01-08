@@ -1,4 +1,4 @@
-# LG
+# Loup-Garou
 This **JavaScript** project was never finished. It was made the 21st of October 2021
 
 This is the very famous game of Werewolf in French but in Discord.  
